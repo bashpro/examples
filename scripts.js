@@ -1,4 +1,4 @@
-let version = "0.1.4";
+let version = "0.2.3";
 
 let currentVer = "0.2.3"
 
@@ -13,6 +13,7 @@ let verChecker = (i, o) => {
 
 
   for(let e = 0; e < 3; e++){
+
 
   	if(v[e] > current[e]){
     	console.log( v[e] + " is more than current");
@@ -31,27 +32,22 @@ let verChecker = (i, o) => {
 
     }else if(v[e] < current[e]){
     	console.log( v[e] + " is lovwer than current");
-      fail = true;
     }
 
   }
 
-  if(fail === true){
-  	console.log("unfortunately, "+version+" needs updating to the current version " + currentVer)
-  }else{
-  	//console.log("you are not on the current version " + currentVer)
-  }
 
   if(pass){
   	console.log("you are running the latest version " + currentVer)
   }
 
-  if(not === true){
-    console.log("You are running " + version + " which is not supported")
-  }else{
-  	//console.log("you are on the current version " + currentVer)
-  }
+  if(version < currentVer){
+    	console.log("unfortunately, "+version+" needs updating to the current version " + currentVer)
+    }
 
+  if(not === true){
+    console.log("You are running " + version + " which has not been made")
+  }
 }
 
 verChecker(version, currentVer)
