@@ -1,0 +1,24 @@
+extend template.pug
+  body
+    // mixin
+    mixin card(i)
+      .card
+        .cardL
+          .cname
+            p= i.name
+            p= i.title
+            
+        .cardR
+          .cpro-pic
+            img(src=i.imgurl)
+              
+    //- vars
+    -
+      var bash = {
+        name : 'Bash',
+        title : 'web dev',
+        imgurl : './img/bash.png'
+      } 
+      
+    +card(bash)
+    
