@@ -1,0 +1,54 @@
+body, p, h1, h2, h3, h4, h5, h6
+  font-family: arial
+  margin: 0px
+
+body
+  background-color:  #212121
+
+.container
+  min-width: 300px
+  max-width: 900px
+  display: flex
+  flex-direction: row
+  margin: auto
+  flex-wrap: wrap
+  padding-top: 50px
+
+.card
+  min-width: 260px
+  border-radius: 15px
+  background-color: #383838
+  margin: 10px 20px
+  display: flex
+  flex-direction: row
+  min-height: 70px
+
+.cardL
+  display: flex
+  flex: 2
+  flex-direction: column
+  justify-content: center
+  margin-left: 20px
+
+.cname
+  p
+    color: white
+
+.ctitle
+  p
+    color: #7a7a7a
+
+.cardR
+  display: flex
+  flex: 1
+
+.cpro-pic
+  width: 70px
+  height: 70px
+  display: flex
+  img
+    border-radius: 50%
+    margin: 10px
+    background-repeat: no-repeat
+  &:nth-child(1)
+    background-size: 70px 70px

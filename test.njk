@@ -2,3 +2,23 @@
 title: Website
 layout: 'base.njk'
 ---
+
+<div class="card">
+
+  {%- for post in collections.post -%}
+    <div class="cardL">
+      <div class="cname">
+        <p>{{post.data.name}}</p>
+      </div>
+      <div class="ctitle">
+        <p>{{post.data.title}}</p>
+      </div>
+    </div>
+    <div class="cardR">
+      <div class="cpro-pic">
+        <img src="{{post.data.imgurl}}" alt="">
+      </div>
+    </div>
+  {%- endfor %}
+
+</div>
