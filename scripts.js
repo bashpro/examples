@@ -1,6 +1,6 @@
-let version = "0.2.3";
+let version = "2.3.4";
 
-let currentVer = "0.2.3"
+let currentVer = "2.2.3"
 
 
 let verChecker = (i, o) => {
@@ -9,7 +9,13 @@ let verChecker = (i, o) => {
 	let fail,
   		pass,
       not,
-      p = 0
+      update,
+      p = 0,
+      w = 0,
+      lower = 0,
+      middle = 0,
+      high = 0
+
 
 
   for(let e = 0; e < 3; e++){
@@ -17,10 +23,31 @@ let verChecker = (i, o) => {
 
   	if(v[e] > current[e]){
     	console.log( v[e] + " is more than current");
-      not = true
+
+      if(v[2] > current[2]){
+
+      	lower= + 1;
+
+      }
+
+      if(v[1] > current[1]){
+
+        middle = + 1;
+
+      }
+
+      if(v[0] > current[0]){
+
+        high=  + 1;
+        not = true;
+      }
 
 
-    }else if(v[e] === current[e]){
+
+
+    }
+
+    else if(v[e] === current[e]){
 
     	console.log( v[e] + " pass");
       p++
@@ -32,20 +59,32 @@ let verChecker = (i, o) => {
 
     }else if(v[e] < current[e]){
     	console.log( v[e] + " is lovwer than current");
+
+    	if(v[2] < current[2]){
+      	if(v[1] < current[1]){
+        	if(v[0] < current[0]){
+      			update = true;
+      		}
+        }
+      }
+
     }
 
   }
+
+
+console.log(`${high}.${middle}.${lower}`);
 
 
   if(pass){
   	console.log("you are running the latest version " + currentVer)
   }
 
-  if(version < currentVer){
+  if(update){
     	console.log("unfortunately, "+version+" needs updating to the current version " + currentVer)
     }
 
-  if(not === true){
+  if(not){
     console.log("You are running " + version + " which has not been made")
   }
 }

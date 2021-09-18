@@ -15,10 +15,11 @@ body
   padding-top: 50px
 
 .card
-  min-width: 260px
+  min-width: 290px
+  max-width: 480px
   border-radius: 15px
   background-color: #383838
-  margin: 10px 20px
+  margin: 5px auto
   display: flex
   flex-direction: row
   min-height: 70px
@@ -33,6 +34,7 @@ body
 .cname
   p
     color: white
+    margin-bottom: 2px
 
 .ctitle
   p
@@ -43,12 +45,21 @@ body
   flex: 1
 
 .cpro-pic
-  width: 70px
-  height: 70px
-  display: flex
-  img
-    border-radius: 50%
-    margin: 10px
-    background-repeat: no-repeat
-  &:nth-child(1)
-    background-size: 70px 70px
+  width: 90px
+  border-radius: 50%
+  height: 90px
+  overflow: hidden
+  margin: 10px
+
+img
+  width: 150px
+  position: relative
+  left: -40px
+  &[src="./img/amy.png"]
+    top: -5px
+    width: 140px
+    left: -35px
+  &[src="./img/charles.png"]
+    width: 210px
+    left: -60px
+    top: -10px
